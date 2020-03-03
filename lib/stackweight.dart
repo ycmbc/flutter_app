@@ -6,9 +6,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     var stack = new Stack(
-      alignment: FractionalOffset(0.5, 0.8),
+      alignment: FractionalOffset(0.5, 0.8), //层叠布局元素位置
       children: <Widget>[
         CircleAvatar(
           backgroundImage: NetworkImage(
@@ -23,6 +22,17 @@ class MyApp extends StatelessWidget {
             color: Colors.blue,
           ),
           child: Text('这是个头像'),
+        ),
+        Text('12123123'),
+        Positioned(  //定位修改个别元素位置
+          top: 10,
+          left: 10,
+          child: Text('flutter'),
+        ),
+        Positioned(
+          right: 10,
+          bottom: 10,
+          child: Text('fluttersssssssss'),
         )
       ],
     );
