@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/routeTest/MainPage.dart';
+import 'package:flutter_app/state/ParentWidget.dart';
+import 'package:flutter_app/state/StatePage.dart';
+import 'package:flutter_app/state/TapboxA.dart';
 
 class NewRoute extends StatelessWidget {
   NewRoute({Key key, this.product}) : super(key: key);
@@ -27,6 +30,12 @@ class NewRoute extends StatelessWidget {
                 Navigator.pop(context, "返回的内容");
               },
             ),
+            RaisedButton(
+              child: Text('查看下一页'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new TapboxA()));
+              },
+            )
           ],
         ));
   }
