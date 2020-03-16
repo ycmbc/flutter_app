@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 
+//StatePage类:
+//
+//管理_active 状态。
+//实现 _handleTapboxChanged() ，当盒子被点击时调用。
+//当点击盒子并且_active状态改变时调用setState()更新UI。
+
+//_TapboxCState 对象:
+//管理_highlight 状态。
+//GestureDetector监听所有tap事件。当用户点下时，它添加高亮（深绿色边框）；当用户释放时，会移除高亮。
+//当按下、抬起、或者取消点击时更新_highlight状态，调用setState()更新UI。
+//当点击时，将状态的改变传递给父组件。
 class StatePage extends StatefulWidget {
 
   @override

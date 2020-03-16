@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 //ParentWidget为TapboxB管理状态
+
+//ParentWidgetState 类:
+//
+//为TapboxB 管理_active状态。
+//实现_handleTapboxChanged()，当盒子被点击时调用的方法。
+//当状态改变时，调用setState()更新UI。
+//TapboxB 类:
+//
+//继承StatelessWidget类，因为所有状态都由其父组件处理。
+//当检测到点击时，它会通知父组件。
 class ParentWidget extends StatefulWidget {
   @override
   _ParentWidgetState createState() => new _ParentWidgetState();
